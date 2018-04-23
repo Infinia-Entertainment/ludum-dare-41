@@ -19,32 +19,56 @@ public class CharacterController : MonoBehaviour {
 
 
     void Update () {
-        Look();
+     ///   Look();
         Move();
     }
 
-    void Look()
-    {
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-        {
-            animator.SetInteger("State", 1);
-        }
-        else
-        {
-            animator.SetInteger("State", 2);
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Look_Down"))
-            {
-                animator.SetInteger("State", 0);
-            }
-        }
-    }
+    //void Look()
+    //{
+    //    if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+    //    {
+    //        animator.SetInteger("State", 1);
+    //    }
+    //    else
+    //    {
+    //        animator.SetInteger("State", 2);
+    //        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Look_Down"))
+    //        {
+    //            animator.SetInteger("State", 0);
+    //        }
+    //    }
+    //}
 
     void Move()
-    {
+    {   
         int isEntered = PlayerPrefs.GetInt("EnterButtonPressed");
         if (isEntered == 1)
         {
+            
             xValue = Input.GetAxis("Horizontal");
+            if (xValue != 0)
+            {           
+                animator.SetInteger("State", 3);
+            }
+            else
+            {
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+                {
+                    animator.SetInteger("State", 1);
+                }
+                else
+                {
+                    animator.SetInteger("State", 2);
+                    if (animator.GetCurrentAnimatorStateInfo(0).IsName("Look_Down"))
+                    {
+                        animator.SetInteger("State", 0);
+                    }
+                }
+            }
+
+
+
+            Debug.Log(animator.GetInteger("State"));
             Vector3 newPos = new Vector3(xValue + transform.position.x, transform.position.y, transform.position.z);
             transform.position = Vector3.Lerp(transform.position, newPos, Time.deltaTime * speed);
 
@@ -60,6 +84,7 @@ public class CharacterController : MonoBehaviour {
                 spriteRenderer.flipX = true;
             }
         }
+
     }
     //void Turn()
     //{

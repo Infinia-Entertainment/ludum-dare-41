@@ -293,18 +293,13 @@ MonoBehaviour:
   secondDialogue:
     name: '"Little" Boy'
     sentences:
-    - 'You always just have to come out
-
-      of nowhere when you are not
-
-      NEEDED at all??!'
-    - But I reaaaly need to go there!
-    - I've forgotten...
-    - Em...
-    - I forgot my...
-    - JACKET!!!
-    - '*Runs away through the door*'
-    - (It is this moment old lady sees metal sword in his other hand)
+    - But I really , really need to go!
+    - "I\u2019ve forgotten my.."
+    - "Em\u2026"
+    - "I forgot my\u2026"
+    - j...jacket
+    - <i>Runs out the door...r</i>
+    - <i>The old lady spotted him with a metal sword as he ferociously left...</i>
   lastDialogue: 2
   animationTime: 1
   animator: {fileID: 565420890}
@@ -851,18 +846,18 @@ MonoBehaviour:
   dialogue:
     name: Old Lady
     sentences:
-    - 'Where do you think you are going??? '
+    - Where do you think you are going?
     - You know it is very dangerous!
-    - No one has returned from there yet...
-    - Even your father...
-    - That place is purely dark, and even the torch...
-    - '...can''t give it a proper light'
-    - 'Many people heard strange noises
+    - No one has returned from there...
+    - Not even your father...
+    - That place is pure darkness, and even a torch...
+    - '...can''t illuminate it properly'
+    - 'Many people have heard strange noises
 
       coming from there!'
-    - "Who knows who is producing them? \nYou NEVER KNOW"
-    - "Forget about this idea, you \naren't going anywhere, and...\n"
-    - WHO GAVE YOU THAT TORCH!??!?
+    - Who knows what's making them?
+    - "Give up on this foolish idea, you aren\u2019t going anywhere, and\u2026 "
+    - Hey! Where did you find that torch!?!?
 --- !u!114 &982265185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,7 +880,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: ccfb9f6b40cd0bb4489a2c74a4b38314, type: 3}
     m_FontSize: 65
-    m_FontStyle: 2
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
@@ -959,7 +954,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: ccfb9f6b40cd0bb4489a2c74a4b38314, type: 3}
     m_FontSize: 100
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
