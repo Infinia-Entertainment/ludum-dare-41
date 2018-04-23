@@ -10,6 +10,9 @@ public class MenuManager : MonoBehaviour {
     public string secondSentence;
     public Button EnterButton;
 
+    public GameObject HelpPanel;
+    public Animator animator;
+
     // Use this for initialization
     void Start() {
         PlayerPrefs.SetInt("Score", 0);
@@ -19,6 +22,8 @@ public class MenuManager : MonoBehaviour {
         PlayerPrefs.SetInt("EnterButtonPressed", enterButtonPressed);
     }
 
+    #region Buttons
+
     public void Enter_Button()
     {
         enterButtonPressed = 1;
@@ -26,6 +31,17 @@ public class MenuManager : MonoBehaviour {
         PlayerPrefs.SetInt("EnterButtonPressed", enterButtonPressed);
         EnterButton.gameObject.SetActive(false);
     }
+
+    public void Help_Button()
+    {
+
+        animator.SetBool("IsOpen", !animator.GetBool("IsOpen"));
+    }
+
+
+    #endregion
+
+
     IEnumerator TypeWrite(string sentenceOne, string sentenceTwo)
     {
         enterText.text = "";
